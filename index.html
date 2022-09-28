@@ -1,0 +1,218 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Курс</title>
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .flag {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            max-width: 100vw;
+            max-height: 100vh;
+            object-fit: cover;
+        }
+        .main {
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(0, 0, 0, .2);
+            z-index: 1;
+        }
+        .header {
+            width: fit-content;
+            text-align: center;
+            font-size: 10vh;
+            font-family: sans-serif;
+            font-weight: bold;
+            margin: 2vh auto 5vh auto;
+            color: #d0a400;
+            text-transform: uppercase;
+            border-bottom: .3vh solid #d0a400;
+        }
+        .course {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5vh 18vw 0 18vw;
+        }
+        .course svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 130px;
+            width: 130px;
+        }
+        .course .num {
+            font-size: 12vh;
+            font-weight: bold;
+            font-family: sans-serif;
+            color: #fff;
+            background: none;
+            border: none;
+            outline: none;
+        }
+        .course svg + input {
+            text-align: end !important;
+        }
+    </style>
+</head>
+<body>
+<img class="flag" src="./media/flag.webp">
+<div class="main">
+    <div class="header">
+        Обмін Валют
+    </div>
+    <div class="course" id="dollar">
+        <input data-buy oninput="changeCourse(event, 'dollar', true)" class="num" value="00,00" size="4" />
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_2_8)">
+                <circle cx="22" cy="22" r="16" fill="#559602"/>
+            </g>
+            <path d="M21.4588 30.6364V14.2727H22.5071V30.6364H21.4588ZM24.2393 19.674C24.1882 19.1584 23.9688 18.7578 23.581 18.4723C23.1932 18.1868 22.6669 18.044 22.0021 18.044C21.5504 18.044 21.169 18.108 20.858 18.2358C20.5469 18.3594 20.3082 18.532 20.142 18.7536C19.9801 18.9751 19.8991 19.2266 19.8991 19.5078C19.8906 19.7422 19.9396 19.9467 20.0462 20.1214C20.157 20.2962 20.3082 20.4474 20.5 20.5753C20.6918 20.6989 20.9134 20.8075 21.1648 20.9013C21.4162 20.9908 21.6847 21.0675 21.9702 21.1314L23.1463 21.4126C23.7173 21.5405 24.2415 21.7109 24.7188 21.924C25.196 22.1371 25.6094 22.3991 25.9588 22.7102C26.3082 23.0213 26.5788 23.3878 26.7706 23.8097C26.9666 24.2315 27.0668 24.7152 27.071 25.2607C27.0668 26.0618 26.8622 26.7564 26.4574 27.3445C26.0568 27.9283 25.4773 28.3821 24.7188 28.706C23.9645 29.0256 23.0547 29.1854 21.9893 29.1854C20.9325 29.1854 20.0121 29.0234 19.228 28.6996C18.4482 28.3757 17.8388 27.8963 17.3999 27.2614C16.9652 26.6222 16.7372 25.8317 16.7159 24.8899H19.3942C19.424 25.3288 19.5497 25.6953 19.7713 25.9893C19.9972 26.2791 20.2976 26.4986 20.6726 26.6477C21.0518 26.7926 21.4801 26.8651 21.9574 26.8651C22.4261 26.8651 22.8331 26.7969 23.1783 26.6605C23.5277 26.5241 23.7983 26.3345 23.9901 26.0916C24.1818 25.8487 24.2777 25.5696 24.2777 25.2543C24.2777 24.9602 24.1903 24.7131 24.0156 24.5128C23.8452 24.3125 23.5938 24.142 23.2614 24.0014C22.9332 23.8608 22.5305 23.733 22.0533 23.6179L20.6278 23.2599C19.5241 22.9915 18.6527 22.5717 18.0135 22.0007C17.3743 21.4297 17.0568 20.6605 17.0611 19.6932C17.0568 18.9006 17.2678 18.2081 17.6939 17.6158C18.1243 17.0234 18.7145 16.5611 19.4645 16.2287C20.2145 15.8963 21.0668 15.7301 22.0213 15.7301C22.9929 15.7301 23.8409 15.8963 24.5653 16.2287C25.294 16.5611 25.8608 17.0234 26.2656 17.6158C26.6705 18.2081 26.8793 18.8942 26.892 19.674H24.2393Z" fill="white"/>
+            <defs>
+                <filter id="filter0_d_2_8" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_2_8"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_8"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_8" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <input data-sale oninput="changeCourse(event, 'dollar', false)" class="num" value="00,00" size="4" />
+    </div>
+    <div class="course" id="euro">
+        <input data-buy oninput="changeCourse(event, 'euro', true)" class="num" value="00,00" size="4">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d_2_7)">
+                <circle cx="22" cy="22" r="16" fill="#027296"/>
+            </g>
+            <path d="M23.113 29.19C22.1377 29.19 21.2447 29.019 20.434 28.677C19.6233 28.3223 18.9203 27.8347 18.325 27.214C17.7297 26.5807 17.2673 25.846 16.938 25.01C16.6213 24.174 16.463 23.2747 16.463 22.312C16.463 21.3493 16.6213 20.45 16.938 19.614C17.2547 18.778 17.7107 18.0497 18.306 17.429C18.9013 16.8083 19.6043 16.3207 20.415 15.966C21.2257 15.6113 22.1187 15.434 23.094 15.434C24.1073 15.434 24.994 15.6113 25.754 15.966C26.5267 16.308 27.2233 16.783 27.844 17.391L26.096 19.139C25.7287 18.7083 25.2917 18.379 24.785 18.151C24.291 17.923 23.702 17.809 23.018 17.809C22.2327 17.809 21.5423 17.999 20.947 18.379C20.3517 18.7463 19.8893 19.272 19.56 19.956C19.2307 20.6273 19.066 21.4127 19.066 22.312C19.066 23.2113 19.2307 24.003 19.56 24.687C19.8893 25.3583 20.358 25.884 20.966 26.264C21.574 26.644 22.296 26.834 23.132 26.834C23.7907 26.834 24.367 26.72 24.861 26.492C25.3677 26.2513 25.8047 25.9157 26.172 25.485L27.92 27.233C27.2993 27.8537 26.5963 28.335 25.811 28.677C25.0257 29.019 24.1263 29.19 23.113 29.19ZM15.19 21.628V19.861H24.329L23.816 21.628H15.19ZM15.19 24.801V23.053H23.588L23.094 24.801H15.19Z" fill="white"/>
+            <defs>
+                <filter id="filter0_d_2_7" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_2_7"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_7"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_7" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <input data-sale oninput="changeCourse(event, 'euro', false)" class="num" value="00,00" size="4" />
+    </div>
+    <div class="course" id="zloty">
+        <input data-buy oninput="changeCourse(event, 'zloty', true)" class="num" value="00,00" size="4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <g filter="url(#filter0_d_5_2)">
+                <circle cx="22" cy="22" r="16" fill="#02967B"/>
+            </g>
+            <rect x="28.4684" y="16.9378" width="2" height="8.41858" transform="rotate(45 28.4684 16.9378)" fill="white"/>
+            <path d="M15.456 26.575L20.32 20.248H23.322L18.458 26.575H15.456ZM15.456 28V26.575L17.432 25.834H23.208V28H15.456ZM15.798 20.989V18.823H23.322V20.248L21.327 20.989H15.798ZM24.9526 28V14.263H27.4416V28H24.9526Z" fill="white"/>
+            <defs>
+                <filter id="filter0_d_5_2" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_5_2"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_2"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_2" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <input data-sale oninput="changeCourse(event, 'zloty', false)" class="num" value="00,00" size="4" />
+    </div>
+    <div class="course" id="funt">
+        <input data-buy oninput="changeCourse(event, 'funt', true)" class="num" value="00,00" size="4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <g filter="url(#filter0_d_5_8)">
+                <circle cx="22" cy="22" r="16" fill="#C5580A"/>
+            </g>
+            <path d="M18.869 29V19.766C18.869 18.8667 19.059 18.0877 19.439 17.429C19.819 16.7703 20.3383 16.2637 20.997 15.909C21.6683 15.5417 22.422 15.358 23.258 15.358C24.1573 15.358 24.911 15.5417 25.519 15.909C26.127 16.2637 26.6147 16.707 26.982 17.239L25.329 18.892C25.063 18.4993 24.7843 18.2017 24.493 17.999C24.2017 17.7963 23.809 17.695 23.315 17.695C22.9477 17.695 22.6183 17.7773 22.327 17.942C22.0483 18.094 21.833 18.3157 21.681 18.607C21.529 18.8983 21.453 19.253 21.453 19.671V29H18.869ZM17.121 29V26.701H26.659V29H17.121ZM17.121 23.471V21.514H24.854V23.471H17.121Z" fill="white"/>
+            <defs>
+                <filter id="filter0_d_5_8" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_5_8"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_8"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_8" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <input data-sale oninput="changeCourse(event, 'funt', false)" class="num" value="00,00" size="4" />
+    </div>
+    <div class="course" id="frank">
+        <input data-buy oninput="changeCourse(event, 'frank', true)" class="num" value="00,00" size="4">
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
+            <g filter="url(#filter0_d_5_11)">
+                <circle cx="22" cy="22" r="16" fill="#5A069C"/>
+            </g>
+            <path d="M15.224 28V16.049H17.536V28H15.224ZM16.924 23.104V21.047H22.942V23.104H16.924ZM16.924 18.089V16.049H23.231V18.089H16.924ZM24.8141 28V19.789H27.0411V28H24.8141ZM27.0411 23.461L26.1741 22.883C26.2761 21.8743 26.5708 21.081 27.0581 20.503C27.5455 19.9137 28.2481 19.619 29.1661 19.619C29.5628 19.619 29.9198 19.687 30.2371 19.823C30.5545 19.9477 30.8435 20.1573 31.1041 20.452L29.7101 22.05C29.5855 21.914 29.4325 21.812 29.2511 21.744C29.0811 21.676 28.8828 21.642 28.6561 21.642C28.1801 21.642 27.7891 21.795 27.4831 22.101C27.1885 22.3957 27.0411 22.849 27.0411 23.461Z" fill="white"/>
+            <defs>
+                <filter id="filter0_d_5_11" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feMorphology radius="1" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_5_11"/>
+                    <feOffset/>
+                    <feGaussianBlur stdDeviation="2.5"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5_11"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5_11" result="shape"/>
+                </filter>
+            </defs>
+        </svg>
+        <input data-sale oninput="changeCourse(event, 'frank', false)" class="num" value="00,00" size="4" />
+    </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  const changeCourse = (e, currency, isBuy) => {
+    socket.emit('new message', JSON.stringify({
+        value: e.target.value,
+        currency: currency,
+        isBuy: isBuy
+    }))
+  };
+  socket.on('new message', (msg) => {
+    const parsedObject = JSON.parse(msg);
+    const type = parsedObject.isBuy ? 'buy' : 'sale';
+    document.querySelector(`#${parsedObject.currency} [data-${type}]`).value = parsedObject.value;
+  })
+
+</script>
+
+</body>
+</html>
